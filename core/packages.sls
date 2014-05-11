@@ -7,7 +7,7 @@ htop:
 vim:
   pkg:
     - installed
-mobar:
+xmobar:
   pkg:
     - installed
 xmonad:
