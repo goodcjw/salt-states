@@ -1,3 +1,15 @@
+/home/jwcai/.bashrc:
+  file.managed:
+    - source: salt://jwcai/managed_files/bashrc
+    - user: jwcai
+    - group: jwcai
+    - mode: 644
+/home/jwcai/.bash_aliases:
+  file.managed:
+    - source: salt://jwcai/managed_files/bash_aliases
+    - user: jwcai
+    - group: jwcai
+    - mode: 644
 /home/jwcai/.config/terminator:
   file.directory:
     - user: jwcai
