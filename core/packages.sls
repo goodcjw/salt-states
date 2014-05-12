@@ -1,6 +1,9 @@
 dstat:
   pkg:
     - installed
+emacs24:
+  pkg:
+    - installed
 fonts-inconsolata:
   pkg:
     - installed

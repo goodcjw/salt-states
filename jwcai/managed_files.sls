@@ -14,6 +14,12 @@
     - user: jwcai
     - group: jwcai
     - mode: 644
+/home/jwcai/.emacs:
+  file.managed:
+    - source: salt://jwcai/managed_files/emacs.el
+    - user: jwcai
+    - group: jwcai
+    - mode: 644
 /home/jwcai/.xmobarrc:
   file.managed:
     - source: salt://jwcai/managed_files/xmobarrc
