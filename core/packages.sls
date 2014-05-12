@@ -1,6 +1,9 @@
 dstat:
   pkg:
     - installed
+fonts-inconsolata:
+  pkg:
+    - installed
 htop:
   pkg:
     - installed
@@ -20,6 +23,9 @@ tree:
   pkg:
     - installed
 vim:
+  pkg:
+    - installed
+xfonts-terminus:
   pkg:
     - installed
 xmobar:

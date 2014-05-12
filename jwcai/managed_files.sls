@@ -1,3 +1,19 @@
+/home/jwcai/.config/terminator:
+  file.directory:
+    - user: jwcai
+    - group: jwcai
+    - mode: 755
+    - makedirs: True
+    - recurse:
+      - user
+      - group
+      - mode
+/home/jwcai/.config/terminator/config:
+  file.managed:
+    - source: salt://jwcai/managed_files/terminator.conf
+    - user: jwcai
+    - group: jwcai
+    - mode: 644
 /home/jwcai/.Xmodmap:
   file.managed:
     - source: salt://jwcai/managed_files/xmodmap
