@@ -1,3 +1,6 @@
+include:
+  - jwcai.managed_files
+
 jwcai:
   user.present:
     - fullname: Jiwen Cai
