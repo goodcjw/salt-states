@@ -32,6 +32,12 @@
     - user: jwcai
     - group: jwcai
     - mode: 644
+/home/jwcai/.gitconfig:
+  file.managed:
+    - source: salt://jwcai/managed_files/gitconfig
+    - user: jwcai
+    - group: jwcai
+    - mode: 644
 /home/jwcai/.xmobarrc:
   file.managed:
     - source: salt://jwcai/managed_files/xmobarrc

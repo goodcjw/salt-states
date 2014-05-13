@@ -1,0 +1,7 @@
+[user]
+	email = jwcai@me.com
+	name = Jiwen Cai
+[core]
+	editor = emacsclient -t
+[color]
+	ui = true
