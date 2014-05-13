@@ -44,6 +44,16 @@
     - user: jwcai
     - group: jwcai
     - mode: 644
+/home/jwcai/.xmonad:
+  file.directory:
+    - user: jwcai
+    - group: jwcai
+    - mode: 755
+    - makedirs: True
+    - recurse:
+      - user
+      - group
+      - mode
 /home/jwcai/.xmonad/xmonad.hs:
   file.managed:
     - source: salt://jwcai/managed_files/xmonad.hs
