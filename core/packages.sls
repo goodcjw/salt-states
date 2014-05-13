@@ -4,6 +4,9 @@ dstat:
 emacs24:
   pkg:
     - installed
+feh:
+  pkg:
+    - installed
 fonts-inconsolata:
   pkg:
     - installed
