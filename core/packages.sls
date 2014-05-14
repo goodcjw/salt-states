@@ -16,6 +16,9 @@ htop:
 icedtea-7-plugin:
   pkg:
     - installed
+ipython:
+  pkg:
+    - installed
 openjdk-7-jre:
   pkg:
     - installed

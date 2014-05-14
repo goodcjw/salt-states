@@ -1,1 +1,2 @@
+alias i="ipython --no-confirm-exit"
 alias m="emacsclient --alternate-editor='' -t"
