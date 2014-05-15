@@ -1,3 +1,6 @@
+acpi:
+  pkg:
+    - installed
 dstat:
   pkg:
     - installed
