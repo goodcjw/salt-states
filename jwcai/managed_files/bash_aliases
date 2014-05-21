@@ -1,2 +1,3 @@
 alias i="ipython --no-confirm-exit"
 alias m="emacsclient --alternate-editor='' -t"
+alias cleanpyc="find . -name *.pyc | while read line; do echo DEL \$line; rm \$line; done"
