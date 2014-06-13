@@ -97,7 +97,7 @@
 
 ;; MELPA
 (require 'package)
-(setq melpa-package-list '(jabber google-c-style))
+(setq melpa-package-list '(jabber google-c-style jsx-mode))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
@@ -134,6 +134,10 @@
     (if (> (length status) 20)
      (concat (substring status 0 16) " ...")
      status))))
+
+;; JSX
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
+(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
 
 (message "======")
 (message " Done ")
