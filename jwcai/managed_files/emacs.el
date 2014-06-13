@@ -88,6 +88,8 @@
 ;; C-c o           => uick switch between .h and .c files
 (add-hook 'c-mode-common-hook
   (lambda() (local-set-key (kbd "C-c o") 'ff-find-other-file)))
+(add-hook 'c-mode-common-hook
+  (lambda() (setq c-basic-offset 4)))
 
 (message "======================")
 (message " Third Party Packages ")
