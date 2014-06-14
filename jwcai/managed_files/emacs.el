@@ -97,7 +97,7 @@
 
 ;; MELPA
 (require 'package)
-(setq melpa-package-list '(jabber google-c-style))
+(setq melpa-package-list '(jabber google-c-style magit))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
