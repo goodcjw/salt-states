@@ -135,6 +135,14 @@
      (concat (substring status 0 16) " ...")
      status))))
 
+;; Magit
+;; C-c C-g C-g     => magit-status
+(define-key global-map "\C-c\C-g\C-g" 'magit-status)
+;; C-c C-g C-b     => magit-blame-mode
+(define-key global-map "\C-c\C-g\C-b" 'magit-blame-mode)
+;; Magit disable item highlight
+(custom-set-faces '(magit-item-highlight ((t nil))))
+
 (message "======")
 (message " Done ")
 (message "======")
