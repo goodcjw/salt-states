@@ -137,9 +137,9 @@
 
 ;; Magit
 ;; C-c C-g C-g     => magit-status
-(define-key global-map "\C-c\C-g\C-g" 'magit-status)
+(define-key global-map "\C-x\C-g\C-g" 'magit-status)
 ;; C-c C-g C-b     => magit-blame-mode
-(define-key global-map "\C-c\C-g\C-b" 'magit-blame-mode)
+(define-key global-map "\C-x\C-g\C-b" 'magit-blame-mode)
 ;; Magit disable item highlight
 (custom-set-faces '(magit-item-highlight ((t nil))))
 
