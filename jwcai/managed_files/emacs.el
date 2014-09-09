@@ -97,7 +97,7 @@
 
 ;; MELPA
 (require 'package)
-(setq melpa-package-list '(jabber google-c-style magit))
+(setq melpa-package-list '(jabber google-c-style magit mu4e-maildirs-extension))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
@@ -142,6 +142,16 @@
 (define-key global-map "\C-x\C-g\C-b" 'magit-blame-mode)
 ;; Magit disable item highlight
 (custom-set-faces '(magit-item-highlight ((t nil))))
+
+;; Email
+(setq
+ user-mail-address "scai@vessel.com"
+ user-full-name  "Steve Cai")
+(setq message-send-mail-function 'smtpmail-send-it
+  smtpmail-stream-type 'starttls
+  smtpmail-default-smtp-server "smtp.gmail.com"
+  smtpmail-smtp-server "smtp.gmail.com"
+  smtpmail-smtp-service 587)
 
 (message "======")
 (message " Done ")
