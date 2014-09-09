@@ -46,3 +46,6 @@ xmobar:
 xmonad:
   pkg:
     - installed
+mu4e:
+  pkg:
+    - installed
