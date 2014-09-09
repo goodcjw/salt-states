@@ -3,7 +3,7 @@ include:
 
 jwcai:
   user.present:
-    - fullname: Jiwen Cai
+    - fullname: Jiwen 'Steve' Cai
     - shell: /bin/bash
     - home: /home/jwcai
     - groups:
