@@ -49,3 +49,6 @@ xmonad:
 mu4e:
   pkg:
     - installed
+httpie:
+  pkg:
+    - installed
