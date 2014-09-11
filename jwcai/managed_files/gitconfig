@@ -1,7 +1,0 @@
-[user]
-	email = jwcai@me.com
-	name = Jiwen Cai
-[core]
-	editor = emacsclient --alternate-editor='' -t
-[color]
-	ui = true

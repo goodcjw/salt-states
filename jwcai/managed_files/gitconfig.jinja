@@ -1,0 +1,9 @@
+[user]
+	email = {% if grains['host'] == 'magrathea' -%}scai@vessel.com{%-else-%}jwcai@me.com{%- endif %}
+	name = Jiwen 'Steve' Cai
+[core]
+	editor = emacsclient --alternate-editor='' -t
+[color]
+	ui = true
+[push]
+	default = simple

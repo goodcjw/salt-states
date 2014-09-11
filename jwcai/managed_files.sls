@@ -34,10 +34,11 @@
     - mode: 644
 /home/jwcai/.gitconfig:
   file.managed:
-    - source: salt://jwcai/managed_files/gitconfig
+    - source: salt://jwcai/managed_files/gitconfig.jinja
     - user: jwcai
     - group: jwcai
     - mode: 644
+    - template: jinja
 /home/jwcai/.xmobarrc:
   file.managed:
     - source: salt://jwcai/managed_files/xmobarrc
