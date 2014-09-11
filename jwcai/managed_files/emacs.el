@@ -97,7 +97,11 @@
 
 ;; MELPA
 (require 'package)
-(setq melpa-package-list '(jabber google-c-style magit mu4e-maildirs-extension))
+(setq melpa-package-list '(jabber
+                           google-c-style
+                           magit
+                           mu4e-maildirs-extension
+                           coffee-mode))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
