@@ -12,7 +12,8 @@ myManageHook = composeAll
     , className =? "Vncviewer" --> doFloat
     ]
 
-myLayout = Tall 1 (1/12) (1/2) ||| Full
+-- myLayout = Tall 1 (1/12) (1/2) ||| Full
+myLayout = Tall 1 (1/12) (1/2) ||| ThreeCol 1 (1/12) (1/3) ||| Full
 
 orLayout = layoutHook defaultConfig
 
