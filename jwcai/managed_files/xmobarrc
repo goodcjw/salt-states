@@ -7,11 +7,12 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                     , Run Battery ["Bat0"] 600
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Date "%a %b %_d %Y %H:%M" "time" 10
                     , Run Com "uname" ["-n"] "" 36000
-                    , Run Date "%a %b %_d %Y %H:%M" "date" 10
+                    , Run Com "date" ["-u", "+\"%Y-%m-%dT%H:%M:%S"] "" 1
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %battery% | %cpu% | %memory% | %wlan1% | <fc=#ee9a00>%date%</fc> | %uname%"
+       , template = "%StdinReader% }{ %battery% | %cpu% | %memory% | %wlan1% | <fc=#ee9a00>%time%</fc> | %date% | %uname%"
        }
