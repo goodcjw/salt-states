@@ -67,3 +67,9 @@
     - user: jwcai
     - group: jwcai
     - mode: 644
+/home/jwcai/.screenrc:
+  file.managed:
+    - source: salt://jwcai/managed_files/screenrc
+    - user: jwcai
+    - group: jwcai
+    - mode: 644
