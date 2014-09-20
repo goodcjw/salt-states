@@ -8,4 +8,5 @@ jwcai:
     - home: /home/jwcai
     - groups:
       - sudo
-
+    - optional_groups:
+      - docker
