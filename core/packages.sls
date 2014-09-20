@@ -52,3 +52,6 @@ mu4e:
 httpie:
   pkg:
     - installed
+zsh:
+  pkg:
+    - installed

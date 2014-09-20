@@ -4,7 +4,7 @@ include:
 jwcai:
   user.present:
     - fullname: Jiwen 'Steve' Cai
-    - shell: /bin/bash
+    - shell: /usr/bin/zsh
     - home: /home/jwcai
     - groups:
       - sudo
