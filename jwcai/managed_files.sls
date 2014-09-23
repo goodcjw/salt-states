@@ -73,3 +73,9 @@
     - user: jwcai
     - group: jwcai
     - mode: 644
+/home/jwcai/.zshrc:
+  file.managed:
+    - source: salt://jwcai/managed_files/zshrc
+    - user: jwcai
+    - group: jwcai
+    - mode: 644
