@@ -13,13 +13,22 @@ feh:
 fonts-inconsolata:
   pkg:
     - installed
+gnome-panel:
+  pkg:
+    - installed
 htop:
+  pkg:
+    - installed
+httpie:
   pkg:
     - installed
 icedtea-7-plugin:
   pkg:
     - installed
 ipython:
+  pkg:
+    - installed
+mu4e:
   pkg:
     - installed
 openjdk-7-jre:
@@ -44,12 +53,6 @@ xmobar:
   pkg:
     - installed
 xmonad:
-  pkg:
-    - installed
-mu4e:
-  pkg:
-    - installed
-httpie:
   pkg:
     - installed
 zsh:
