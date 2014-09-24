@@ -10,3 +10,7 @@ jwcai:
       - sudo
     - optional_groups:
       - docker
+
+https://github.com/zsh-users/antigen.git:
+  git.latest:
+    - target: /home/jwcai/.antigen
