@@ -79,6 +79,10 @@
 (message " Custom Key Binding ")
 (message "====================")
 
+;; Fix backward delete
+(global-set-key (kbd "C-h") 'delete-backward-char)
+(global-set-key (kbd "M-h") 'backward-kill-word)
+
 ;; C-z             => undo
 (define-key global-map "\C-z" 'undo)
 
