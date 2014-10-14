@@ -149,7 +149,15 @@
 ;; C-c C-g C-b     => magit-blame-mode
 (define-key global-map "\C-x\C-g\C-b" 'magit-blame-mode)
 ;; Magit disable item highlight
-(custom-set-faces '(magit-item-highlight ((t nil))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(magit-item-highlight ((t nil)))
+ '(magit-tag ((t (:background "orange" :foreground "black"))))
+ '(magit-log-head-label-tags ((t (:background "orange" :foreground "black"))))
+ '(magit-log-reflog-label-commit ((t (:background "orange" :foreground "black")))))
 
 ;; Email
 (require 'mu4e)
@@ -175,7 +183,12 @@
 
 ;; coffeescript
 ;; This gives you a tab of 2 spaces
-(custom-set-variables '(coffee-tab-width 2))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(coffee-tab-width 2))
 (eval-after-load "coffee-mode"
   '(progn
      (define-key coffee-mode-map [(meta r)] 'coffee-compile-region)
