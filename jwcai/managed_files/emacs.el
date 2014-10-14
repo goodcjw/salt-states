@@ -105,7 +105,8 @@
                            google-c-style
                            magit
                            mu4e-maildirs-extension
-                           coffee-mode))
+                           coffee-mode
+                           dockerfile-mode))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
