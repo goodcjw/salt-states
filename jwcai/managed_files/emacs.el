@@ -106,7 +106,8 @@
                            magit
                            mu4e-maildirs-extension
                            coffee-mode
-                           dockerfile-mode))
+                           dockerfile-mode
+                           git-gutter))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
@@ -194,6 +195,13 @@
   '(progn
      (define-key coffee-mode-map [(meta r)] 'coffee-compile-region)
      (define-key coffee-mode-map (kbd "C-j") 'coffee-newline-and-indent)))
+
+;; Git Gutter
+(global-git-gutter-mode 1)
+(custom-set-variables
+  '(git-gutter:modified-sign "X")
+  '(git-gutter:added-sign "+")
+  '(git-gutter:deleted-sign "-"))
 
 (message "======")
 (message " Done ")
