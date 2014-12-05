@@ -1,6 +1,9 @@
 acpi:
   pkg:
     - installed
+autojump
+  pkg:
+    - installed
 dstat:
   pkg:
     - installed
