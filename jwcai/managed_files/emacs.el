@@ -117,11 +117,12 @@
 
 ;; MELPA
 (require 'package)
-(setq melpa-package-list '(google-c-style
-                           magit
-                           coffee-mode
+(setq melpa-package-list '(coffee-mode
                            dockerfile-mode
-                           git-gutter))
+                           git-gutter
+                           google-c-style
+                           less-css-mode
+                           magit))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
