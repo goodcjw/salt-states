@@ -117,10 +117,8 @@
 
 ;; MELPA
 (require 'package)
-(setq melpa-package-list '(jabber
-                           google-c-style
+(setq melpa-package-list '(google-c-style
                            magit
-                           mu4e-maildirs-extension
                            coffee-mode
                            dockerfile-mode
                            git-gutter))
@@ -137,30 +135,6 @@
   (add-hook 'c-mode-common-hook 'google-set-c-style)
   (add-hook 'c-mode-common-hook 'google-make-newline-indent))
 
-;; Jabber
-(require 'jabber-autoloads)
-(setq jabber-account-list
- '(("goodcjw2@gmail.com"
-    (:network-server . "talk.google.com")
-    (:connection-type . ssl))))
-(setq jabber-vcard-avatars-retrieve nil)
-(setq jabber-show-resources nil)
-(setq jabber-roster-line-format "%n (%j) : %S")
-(setq jabber-roster-show-title nil)
-(setq jabber-roster-show-bindings nil)
-(eval-after-load "jabber-roster"
- '(defun jabber-fix-status (status)
-   "Make status strings more readable"
-   (when status
-    (when (string-match "\n+$" status)
-     (setq status (replace-match "" t t status)))
-    (when jabber-remove-newlines
-     (while (string-match "\n" status)
-      (setq status (replace-match " " t t status))))
-    (if (> (length status) 20)
-     (concat (substring status 0 16) " ...")
-     status))))
-
 ;; Magit
 ;; C-c C-g C-g     => magit-status
 (define-key global-map "\C-x\C-g\C-g" 'magit-status)
@@ -176,28 +150,6 @@
  '(magit-tag ((t (:background "orange" :foreground "black"))))
  '(magit-log-head-label-tags ((t (:background "orange" :foreground "black"))))
  '(magit-log-reflog-label-commit ((t (:background "orange" :foreground "black")))))
-
-;; Email
-(require 'mu4e)
-
-;; default
-;; (setq mu4e-maildir "~/Maildir")
-(setq mu4e-drafts-folder "/[Gmail].Drafts")
-(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
-(setq mu4e-trash-folder  "/[Gmail].Trash")
-;; allow for updating mail using 'U' in the main view:
-(setq mu4e-get-mail-command "offlineimap")
-;; don't save message to Sent Messages, Gmail/IMAP takes care of this
-(setq mu4e-sent-messages-behavior 'delete)
-
-(setq
- user-mail-address "scai@vessel.com"
- user-full-name  "Steve Cai")
-(setq message-send-mail-function 'smtpmail-send-it
-  smtpmail-stream-type 'starttls
-  smtpmail-default-smtp-server "smtp.gmail.com"
-  smtpmail-smtp-server "smtp.gmail.com"
-  smtpmail-smtp-service 587)
 
 ;; coffeescript
 ;; This gives you a tab of 2 spaces
