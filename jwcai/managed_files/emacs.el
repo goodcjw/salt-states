@@ -171,7 +171,14 @@
   '(git-gutter:added-sign "+")
   '(git-gutter:deleted-sign "-"))
 
+;; XML Format
+(defun xml-format ()
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)
+  )
+)
+
 (message "======")
 (message " Done ")
 (message "======")
-
