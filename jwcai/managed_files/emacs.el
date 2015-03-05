@@ -103,6 +103,14 @@
 (add-hook 'c-mode-common-hook
   (lambda() (setq c-basic-offset 4)))
 
+;; Org Mode
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-agenda-files (list "~/org/vessel.org"))
+(setq org-todo-keyword-faces
+      '(("ONIT" . "yellow")
+        ("ABRT" . (:foreground "blue" :weight bold))))
+
 (message "======================")
 (message " Third Party Packages ")
 (message "======================")
