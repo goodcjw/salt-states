@@ -52,6 +52,14 @@
 ;; show matching pairs of parentheses
 (show-paren-mode 1)
 
+;; show current file's full path in mini buffer
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
+(require 'ido)
+(ido-mode 'buffers)
+
 (message "=================")
 (message " Emacs Behaviour ")
 (message "=================")
