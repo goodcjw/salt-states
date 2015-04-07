@@ -37,6 +37,12 @@ mu4e:
 openjdk-7-jre:
   pkg:
     - installed
+postgresql-client-9.4:
+  pkg:
+    - installed
+screen:
+  pkg:
+    - installed
 suckless-tools:
   pkg:
     - installed
