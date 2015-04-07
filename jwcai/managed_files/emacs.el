@@ -16,6 +16,9 @@
 ;; hiding the menu bar
 (menu-bar-mode 0)
 
+;; disable xterm mouse, it crushes emacs
+(xterm-mouse-mode nil)
+
 ;; enable margin line number
 (global-linum-mode 1)
 (setq linum-format "%3d ")
@@ -106,6 +109,7 @@
 ;; Org Mode
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+(setq org-src-fontify-natively t)
 (setq org-agenda-files (list "~/org/vessel.org"))
 (setq org-todo-keyword-faces
       '(("ONIT" . "yellow")
@@ -179,6 +183,22 @@
     (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)
   )
 )
+
+;; PEP 8 Checker
+(when (load "flymake" t)
+ (defun flymake-pylint-init ()
+   (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                      'flymake-create-temp-inplace))
+          (local-file (file-relative-name
+                       temp-file
+                       (file-name-directory buffer-file-name))))
+         (list "pep8" (list "--repeat" local-file))))
+
+ (add-to-list 'flymake-allowed-file-name-masks
+              '("\\.py\\'" flymake-pylint-init))
+)
+
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 (message "======")
 (message " Done ")
