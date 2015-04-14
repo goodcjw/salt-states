@@ -40,6 +40,9 @@ openjdk-7-jre:
 postgresql-client-9.4:
   pkg:
     - installed
+pyflakes:
+  pkg:
+    - installed
 screen:
   pkg:
     - installed
