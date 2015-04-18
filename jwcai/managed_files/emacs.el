@@ -120,6 +120,7 @@
 (require 'package)
 (setq melpa-package-list '(coffee-mode
                            dockerfile-mode
+                           flycheck
                            flymake-coffee
                            flymake-easy
                            flymake-less
@@ -210,6 +211,9 @@
 
 (require 'flymake-less)
 (add-hook 'less-css-mode-hook 'flymake-less-load)
+
+;; Flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 (message "======")
 (message " Done ")
