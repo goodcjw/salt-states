@@ -121,13 +121,17 @@
 (setq melpa-package-list '(coffee-mode
                            dockerfile-mode
                            flymake-coffee
+                           flymake-easy
+                           flymake-less
                            git-gutter
                            google-c-style
                            less-css-mode
                            magit))
 (setq package-archives
   '(("melpa" . "http://melpa.milkbox.net/packages/")))
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (package-initialize)
+
 (unless package-archive-contents (package-refresh-contents))
 (dolist (package melpa-package-list)
   (unless (package-installed-p package) (package-install package)))
@@ -200,8 +204,12 @@
  '(flymake-errline ((t (:underline t :bold t))))
 )
 
+(require 'flymake-coffee)
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (add-hook 'coffee-mode-hook 'flymake-coffee-load)
+
+(require 'flymake-less)
+(add-hook 'less-css-mode-hook 'flymake-less-load)
 
 (message "======")
 (message " Done ")
