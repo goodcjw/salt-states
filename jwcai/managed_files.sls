@@ -22,10 +22,11 @@
       - mode
 /home/jwcai/.config/terminator/config:
   file.managed:
-    - source: salt://jwcai/managed_files/terminator.conf
+    - source: salt://jwcai/managed_files/terminator.conf.jinja
     - user: jwcai
     - group: jwcai
     - mode: 644
+    - template: jinja
 /home/jwcai/.emacs:
   file.managed:
     - source: salt://jwcai/managed_files/emacs.el
