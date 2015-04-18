@@ -127,8 +127,8 @@
                            google-c-style
                            less-css-mode
                            magit))
-(setq package-archives
-  '(("melpa" . "http://melpa.milkbox.net/packages/")))
+
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (package-initialize)
 
