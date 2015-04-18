@@ -16,9 +16,6 @@
 ;; hiding the menu bar
 (menu-bar-mode 0)
 
-;; disable xterm mouse, it crushes emacs
-(xterm-mouse-mode nil)
-
 ;; enable margin line number
 (global-linum-mode 1)
 (setq linum-format "%3d ")
@@ -123,6 +120,7 @@
 (require 'package)
 (setq melpa-package-list '(coffee-mode
                            dockerfile-mode
+                           flymake-coffee
                            git-gutter
                            google-c-style
                            less-css-mode
@@ -198,7 +196,12 @@
               '("\\.py\\'" flymake-pylint-init))
 )
 
+(custom-set-faces
+ '(flymake-errline ((t (:underline t :bold t))))
+)
+
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+(add-hook 'coffee-mode-hook 'flymake-coffee-load)
 
 (message "======")
 (message " Done ")
