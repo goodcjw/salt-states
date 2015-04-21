@@ -87,7 +87,6 @@
     - group: jwcai
     - mode: 644
 /usr/share/themes/Emacs/gtk-2.0-key/gtkrc:
-/usr/share/themes/Emacs/gtk-2.0-key/gtkrc:
   file.managed:
     - source: salt://jwcai/managed_files/gtkrc
     - user: root

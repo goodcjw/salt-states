@@ -214,6 +214,7 @@
 
 ;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(flycheck-def-config-file-var flycheck-coffeelintrc coffee-coffeelint "~/.coffeelint.json")
 
 (message "======")
 (message " Done ")
