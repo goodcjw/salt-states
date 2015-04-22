@@ -38,6 +38,7 @@ alias pj="python -mjson.tool"
 alias sn="screen -S"
 alias sr="screen -rd"
 alias fissionsrc="/home/jwcai/Vessel/fission/node_modules/.bin/iced /home/jwcai/Vessel/fission/src/fission.coffee"
+alias calabash="ssh -Y jwcai@calabash.dev-host.vessel.com"
 
 # Python Virtual Environment
 export PYENV_ROOT="$HOME/.pyenv"
