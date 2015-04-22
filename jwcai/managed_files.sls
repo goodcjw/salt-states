@@ -58,10 +58,11 @@
       - mode
 /home/jwcai/.xmonad/xmonad.hs:
   file.managed:
-    - source: salt://jwcai/managed_files/xmonad.hs
+    - source: salt://jwcai/managed_files/xmonad.hs.jinja
     - user: jwcai
     - group: jwcai
     - mode: 644
+    - template: jinja
 /home/jwcai/.Xmodmap:
   file.managed:
     - source: salt://jwcai/managed_files/xmodmap

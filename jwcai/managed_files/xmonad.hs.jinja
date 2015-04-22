@@ -9,8 +9,11 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.ThreeColumns
 import XMonad.Util.Themes
 
-c2 = spacing 20 $ ResizableTall 1 (1/12) (1/2) []
-c3 = spacing 20 $ ThreeCol 1 (1/12) (1/3)
+gutterWidth :: Int
+gutterWidth = {% if grains['host'] in ['calabash'] -%}20{%-else-%}5{%- endif %}
+
+c2 = spacing gutterWidth $ ResizableTall 1 (1/12) (1/2) []
+c3 = spacing gutterWidth $ ThreeCol 1 (1/12) (1/3)
 cr = avoidStruts $ Circle
 tb = noBorders $ tabbed shrinkText defaultTheme
 
@@ -24,8 +27,8 @@ main = do
         {
         terminal = "terminator"
         , borderWidth = 4
-        , normalBorderColor = "#02151B"
-        , focusedBorderColor = "#b84130"
+        , normalBorderColor = "#333333"
+        , focusedBorderColor = "#E36C43"
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         , layoutHook = avoidStruts (c2 ||| c3 ||| cr ||| tb)
         , manageHook = (manageHook gnomeConfig) <+> myManageHooks
